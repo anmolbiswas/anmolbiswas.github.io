@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3g6f23leke12"]
+
+[ext_resource type="Script" uid="uid://xwcgqln2jyl5" path="res://scenes/LesionRow.gd" id="1_4hayw"]
+
+[node name="lesionRow" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+theme_override_constants/separation = 10
+script = ExtResource("1_4hayw")
+
+[node name="SegmentSelectoor" type="OptionButton" parent="."]
+layout_mode = 2
+
+[node name="Severity" type="SpinBox" parent="."]
+layout_mode = 2
+
+[node name="Remove" type="Button" parent="."]
+layout_mode = 2
+text = "Remove"

@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3w6lh7075jyn"]
+
+[ext_resource type="Script" uid="uid://6jqaw1agmacs" path="res://scenes/main.gd" id="1_o5qli"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7dm0k"]
+font_size = 31
+
+[sub_resource type="LabelSettings" id="LabelSettings_o5qli"]
+font_color = Color(0.521141, 0.521141, 0.52114, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o5qli")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Gensini Score Calculator"
+label_settings = SubResource("LabelSettings_7dm0k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Add Lesion"
+
+[node name="LesionContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CalcButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Calculate Score"
+
+[node name="Result" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Score:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = " email me at anmol3d@gmail.com if facing any issues"
+label_settings = SubResource("LabelSettings_o5qli")
+horizontal_alignment = 1
